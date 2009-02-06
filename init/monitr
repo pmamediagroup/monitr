@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+# monitr       Startup script for monitr (http://monitr.rubyforge.org)
+#
+# chkconfig: - 85 15
+# description: Monitr is an easy to configure, easy to extend monitoring \
+#              framework written in Ruby.
+#              
+
+CONF_DIR=/etc/monitr
+
+RETVAL=0
+
+# Go no further if config directory is missing.
+[ -d "$CONF_DIR" ] || exit 0
+
+case "$1" in
+    start)
+      # Create pid directory
+      ruby /usr/bin/monitr -c $CONF_DIR/master.conf
+      RETVAL=$?
+  ;;
+    stop)
+      ruby /usr/bin/monitr terminate
+      RETVAL=$?
+  ;;
+    restart)
+      ruby /usr/bin/monitr terminate
+      ruby /usr/bin/monitr -c $CONF_DIR/master.conf
+      RETVAL=$?
+  ;;
+    status)
+      ruby /usr/bin/monitr status
+      RETVAL=$?
+  ;;
+    *)
+      echo "Usage: monitr {start|stop|restart|status}"
+      exit 1
+  ;;
+esac      
+
+exit $RETVAL
