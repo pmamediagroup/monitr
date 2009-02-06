@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name = %q{monitr}
-  s.version = "0.7.12"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Tom Preston-Werner"]
+  s.authors = ["Tom Preston-Werner", "Jared Dobson"]
   s.date = %q{2008-12-10}
   s.default_executable = %q{monitr}
   s.description = %q{Monitr is an easy to configure, easy to extend monitoring framework written in Ruby.}
@@ -18,6 +18,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib", "ext"]
   s.rubyforge_project = %q{monitr}
   s.rubygems_version = %q{0.0.1}
-  s.summary = %q{Like monit, only ruby awesome}
+  s.summary = %q{ruby process monitor}
   s.test_files = ["test/test_process.rb", "test/test_watch.rb", "test/test_system_portable_poller.rb", "test/test_conditions_tries.rb", "test/test_task.rb", "test/test_condition.rb", "test/test_timeline.rb", "test/test_logger.rb", "test/test_conditions_process_running.rb", "test/test_handlers_kqueue_handler.rb", "test/test_conditions_disk_usage.rb", "test/test_event_handler.rb", "test/test_driver.rb", "test/test_dependency_graph.rb", "test/test_metric.rb", "test/test_registry.rb", "test/test_behavior.rb", "test/test_socket.rb", "test/test_sugar.rb", "test/test_trigger.rb", "test/test_conditions_http_response_code.rb", "test/test_monitr.rb", "test/test_system_process.rb", "test/test_contact.rb"]
 end
