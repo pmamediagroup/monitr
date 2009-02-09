@@ -1,10 +1,10 @@
 require 'rubygems'
 require 'hoe'
 
-Hoe.new('monitr', '0.7.12') do |p|
+Hoe.new('monitr', '0.0.1') do |p|
   p.rubyforge_name = 'monitr'
-  p.author = 'Tom Preston-Werner'
-  p.email = 'tom@rubyisawesome.com'
+  p.author = 'onesupercoder'
+  p.email = 'onesupercoder@gmail.com'
   p.url = 'http://monitr.rubyforge.org/'
   p.summary = 'Like monit, only awesome'
   p.description = "Monitr is an easy to configure, easy to extend monitoring framework written in Ruby."
